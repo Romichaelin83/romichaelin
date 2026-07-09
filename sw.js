@@ -1,11 +1,9 @@
-const CACHE_NAME = 'romy-michael-v1';
+const CACHE_NAME = 'romy-michael-v2';
 const ASSETS = [
   './',
   './index.html',
-  './photography.html',
   './assets/css/style.css',
   './assets/js/main.js',
-  './assets/js/photography.js',
   './assets/images/portrait.png',
   './manifest.json'
 ];
