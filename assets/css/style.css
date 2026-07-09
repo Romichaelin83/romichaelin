@@ -9,7 +9,8 @@
 :root {
     /* Font Families */
     --font-heading: 'Playfair Display', Georgia, serif;
-    --font-body: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-accent: 'Futura', 'Century Gothic', AppleGothic, sans-serif;
 
     /* Transition Profiles */
     --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
@@ -193,6 +194,7 @@ p {
 }
 
 .btn {
+    font-family: var(--font-accent);
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -307,7 +309,7 @@ header.scrolled {
     display: inline-flex;
     flex-direction: column;
     line-height: 1.1;
-    font-family: var(--font-body);
+    font-family: var(--font-accent);
     text-transform: uppercase;
     letter-spacing: 0.1em;
     cursor: pointer;
@@ -350,6 +352,7 @@ header.scrolled {
 }
 
 .nav-links a {
+    font-family: var(--font-accent);
     font-size: 0.9rem;
     font-weight: 400;
     letter-spacing: 0.05em;
@@ -391,6 +394,7 @@ header.scrolled {
 }
 
 .btn-nav-consultation {
+    font-family: var(--font-accent);
     border: 1px solid var(--border-color);
     color: var(--text-primary);
     font-size: 0.7rem;
@@ -435,6 +439,7 @@ header.scrolled {
 }
 
 .vertical-badge {
+    font-family: var(--font-accent);
     position: absolute;
     left: 20px;
     top: 250px;
@@ -705,7 +710,7 @@ header.scrolled {
     font-size: 2.2rem;
     font-weight: 800;
     color: #ffffff;
-    font-family: var(--font-body);
+    font-family: var(--font-accent);
     display: block;
     line-height: 1;
 }
@@ -715,8 +720,7 @@ header.scrolled {
 }
 
 .stat-years {
-    font-family: var(--font-heading);
-    font-style: italic;
+    font-family: var(--font-accent);
     font-weight: 700;
     color: #ffffff;
     font-size: 1.4rem;
@@ -730,6 +734,7 @@ header.scrolled {
 }
 
 .stat-label {
+    font-family: var(--font-accent);
     font-size: 0.7rem;
     text-transform: uppercase;
     letter-spacing: 0.08em;
@@ -794,6 +799,7 @@ header.scrolled {
 }
 
 .poc-subtitle {
+    font-family: var(--font-accent);
     font-size: 0.65rem;
     font-weight: 700;
     letter-spacing: 0.15em;
@@ -1088,6 +1094,7 @@ header.scrolled {
 }
 
 .filter-tab {
+    font-family: var(--font-accent);
     padding: 0.8rem 1.8rem;
     border-radius: 50px;
     font-size: 0.9rem;
@@ -1657,6 +1664,7 @@ textarea.form-control {
 }
 
 .submit-btn {
+    font-family: var(--font-accent);
     width: 100%;
     padding: 1.2rem;
     border-radius: 50px;
