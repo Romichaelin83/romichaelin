@@ -401,16 +401,16 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 typingNode.remove();
                 
-                let response = "I'm not sure about that. Try asking about 'services', 'interior projects', 'photography portfolio', 'contact details', or 'booking a consultation'.";
+                let response = "I'm not sure about that. Try asking about 'services', 'interior design', 'contact details', or 'booking a consultation'.";
 
                 if (query.includes('hi') || query.includes('hello') || query.includes('hey')) {
-                    response = "Hello! Welcome to Romy Michael Studios. How can I assist you with your design, photography, or development goals today?";
+                    response = "Hello! Welcome to Romy Michael Studios. How can I assist you with your design, development, or AI goals today?";
                 } else if (query.includes('service') || query.includes('what do you do')) {
-                    response = "Romy Michael offers expert luxury services in: 1. Interior Architecture 2. Custom Furniture Design 3. Digital Product Design 4. Website Development 5. iOS Mobile Apps 6. AI Integrations 7. Branding Systems 8. Fine Art & Astro Photography.";
+                    response = "Romy Michael offers expert luxury services in: 1. Interior Design 2. Furniture Design 3. Product Design 4. Website Development 5. Mobile App Development 6. AI Solutions 7. Branding & Identity 8. Graphic Design 9. Creative Consultation.";
                 } else if (query.includes('interior') || query.includes('house') || query.includes('room') || query.includes('office') || query.includes('furniture')) {
                     response = "Romy focuses on premium, Apple-inspired luxury interior planning. Our projects like 'LivDsign Pro' and 'MyVi Interio' implement modern layouts, white marble features, custom LEDs, and bespoke walnut-brass furniture.";
-                } else if (query.includes('photo') || query.includes('camera') || query.includes('wildlife') || query.includes('landscape')) {
-                    response = "Romy is a passionate fine art photographer specializing in Wildlife (Kabini Tigers), Travel (Varanasi Ghats), Astrophotography, Landscapes, and Architecture. View our detailed, searchable archive on our dedicated Photography Page!";
+                } else if (query.includes('ai') || query.includes('chatbot') || query.includes('machine learning') || query.includes('automation')) {
+                    response = "Romy creates custom AI-powered solutions including GPT-based chatbots, automation integrations, and machine learning endpoints tailored for businesses and creative studios.";
                 } else if (query.includes('contact') || query.includes('phone') || query.includes('email') || query.includes('location') || query.includes('address') || query.includes('whatsapp')) {
                     response = "You can contact Romy Michael directly via Call/WhatsApp at +91 7034 34 7034 or Email at romichaelin@gmail.com. Our studio is based in Kochi, Kerala, India.";
                 } else if (query.includes('book') || query.includes('consultation') || query.includes('appointment') || query.includes('hire') || query.includes('price')) {
