@@ -5,6 +5,15 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    // Register Service Worker for PWA Offline Support
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('./sw.js')
+                .then(reg => console.log('[Service Worker] Registered successfully:', reg.scope))
+                .catch(err => console.log('[Service Worker] Registration failed:', err));
+        });
+    }
+
     /* --------------------------------------------------------------------------
        1. Light/Dark Mode State Management
        -------------------------------------------------------------------------- */
@@ -29,14 +38,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('header');
     const scrollProgressBar = document.getElementById('scroll-progress');
     const navLinks = document.querySelectorAll('.nav-links a');
+    
+    let lastScrollTop = 0;
+    const scrollThreshold = 100;
 
     window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+
         // Sticky Header shrink
-        if (window.scrollY > 50) {
+        if (scrollTop > 50) {
             header.classList.add('scrolled');
         } else {
             header.classList.remove('scrolled');
         }
+
+        // Auto-Hide Header on scroll down, Reappear on scroll up
+        if (Math.abs(lastScrollTop - scrollTop) > 10) {
+            if (scrollTop > lastScrollTop && scrollTop > scrollThreshold) {
+                header.classList.add('nav-hidden');
+            } else {
+                header.classList.remove('nav-hidden');
+            }
+        }
+        lastScrollTop = scrollTop;
 
         // Scroll Progress Bar
         const windowHeight = document.documentElement.scrollHeight - window.innerHeight;

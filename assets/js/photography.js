@@ -5,6 +5,15 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    // Register Service Worker for PWA Offline Support
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('./sw.js')
+                .then(reg => console.log('[Service Worker] Registered successfully:', reg.scope))
+                .catch(err => console.log('[Service Worker] Registration failed:', err));
+        });
+    }
+
     /* --------------------------------------------------------------------------
        1. Theme Management (Subpage Bridge)
        -------------------------------------------------------------------------- */
@@ -190,6 +199,34 @@ document.addEventListener('DOMContentLoaded', () => {
             closeLightbox();
         }
     });
+
+    // Touch Swipe Support for Lightbox
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    const handleSwipeGesture = () => {
+        const swipeThreshold = 50; // minimum drag distance in pixels
+        if (touchEndX < touchStartX - swipeThreshold) {
+            // Swiped Left -> Show Next Photo
+            stopSlideshow();
+            showNextPhoto();
+        }
+        if (touchEndX > touchStartX + swipeThreshold) {
+            // Swiped Right -> Show Prev Photo
+            stopSlideshow();
+            showPrevPhoto();
+        }
+    };
+
+    lightbox.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    lightbox.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipeGesture();
+    }, { passive: true });
+
 
     /* Slideshow Engine */
     const startSlideshow = () => {

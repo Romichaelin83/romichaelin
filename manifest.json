@@ -1,0 +1,24 @@
+{
+  "name": "Romy Michael | Official Portfolio",
+  "short_name": "Romy Michael",
+  "description": "Showcasing luxury spatial design, fine art photography, product design, and modern software architectures.",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#0d0d0d",
+  "theme_color": "#0d0d0d",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "assets/images/portrait.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/images/portrait.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -2,10 +2,30 @@
 <html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Photography Workspace | Romy Michael</title>
     <meta name="description" content="Explore Romy Michael's high-end fine art photography workspace featuring nature, wildlife, astrophotography, travel, and portraits.">
     
+    <!-- PWA & Mobile settings -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0d0d0d">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="assets/images/portrait.png">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/Romichaelin83/romichaelin">
+    <meta property="og:title" content="Photography Workspace | Romy Michael">
+    <meta property="og:description" content="Explore Romy Michael's high-end fine art photography workspace featuring nature, wildlife, astrophotography, travel, and portraits.">
+    <meta property="og:image" content="assets/images/portrait.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Photography Workspace | Romy Michael">
+    <meta property="twitter:description" content="Explore Romy Michael's high-end fine art photography workspace featuring nature, wildlife, astrophotography, travel, and portraits.">
+    <meta property="twitter:image" content="assets/images/portrait.png">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,6 +33,22 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Romy Michael",
+      "jobTitle": "Photographer & Designer",
+      "url": "https://github.com/Romichaelin83/romichaelin",
+      "image": "assets/images/portrait.png",
+      "brand": {
+        "@type": "Brand",
+        "name": "Romy Michael Studios"
+      }
+    }
+    </script>
     
     <style>
         /* Photography Page Specific Styles */
